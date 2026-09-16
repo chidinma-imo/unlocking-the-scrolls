@@ -1,1 +1,69 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Unlocking the Scrolls</title><link rel='stylesheet' href='styles.css'></head><body><div class='noise'></div><header><div class='mark'>UTS</div><nav><a href='#why'>Why</a><a href='#scrolls'>Scrolls</a><a href='#ask'>Ask</a></nav></header><main><section class='hero'><div class='orb'></div><div class='scroll' id='scroll'><div class='roll top'></div><div class='paper'><span>In the beginning...</span><span class='script'>SEARCH · READ · ASK · DISCOVER</span></div><div class='roll bottom'></div></div><div class='hero-copy'><p class='eyebrow'>A place to search Scripture together</p><h1>UNLOCKING<br><i>THE SCROLLS</i></h1><p class='lead'>There is more to the Word.</p><button onclick="document.querySelector('#scrolls').scrollIntoView({behavior:'smooth'})">ENTER THE SCROLLS</button></div></section><section id='why' class='story'><p class='eyebrow'>WHY WE UNLOCK</p><h2>God is limitless.<br><em>There is always more to uncover.</em></h2><p>God led Chidinma to share what He has been teaching her—not because she has every answer, but because discoveries in Scripture are worth bringing into the light. One verse can open something new when we search it from another angle, alongside another passage, or in another season.</p><div class='rule'>THE HOLY SPIRIT HELPS US UNLOCK THE SCROLLS.</div></section><section class='welcome'><div><p class='eyebrow'>WELCOME TO UNLOCKING THE SCROLLS</p><h2>BY CHIDINMA IMO</h2></div><p>Hi, I’m Chidinma, and I’m the person behind Unlocking the Scrolls. The more I searched the Word, the more I realised there was always more to uncover. So I created this space to search together—to ask questions, examine what Scripture actually says, discover what we may have missed, and share what we find.</p></section><section id='scrolls' class='library'><p class='eyebrow'>THE LIBRARY</p><h2>OPEN A SCROLL.</h2><div class='scroll-grid'><article onclick="this.classList.toggle('open')"><div class='mini-roll'></div><h3>APOLOGETICS</h3><p>Christianity · Islam · Truth · Faith</p><span>OPEN →</span></article><article onclick="this.classList.toggle('open')"><div class='mini-roll'></div><h3>CHARACTERS</h3><p>People behind the passages</p><span>OPEN →</span></article><article onclick="this.classList.toggle('open')"><div class='mini-roll'></div><h3>SCRIPTURE</h3><p>Words · passages · patterns</p><span>OPEN →</span></article><article onclick="this.classList.toggle('open')"><div class='mini-roll'></div><h3>QUESTIONS</h3><p>Things wondered about and searched out</p><span>OPEN →</span></article></div></section><section id='ask' class='ask'><div><p class='eyebrow'>THE SEARCH CONTINUES</p><h2>What have you always wanted to ask?</h2><p>Maybe you've read the verse ten times. Maybe there is something you've never understood. Ask it. Your question may become the next Scroll.</p></div><form onsubmit='event.preventDefault(); alert("Your question is ready to be connected to the community.")'><input placeholder='Your name' required><input type='email' placeholder='Your email' required><input placeholder='Scripture reference (optional)'><textarea placeholder='Your question...' required></textarea><button>SEND THE QUESTION</button></form></section></main><footer><strong>UNLOCKING THE SCROLLS</strong><span>KEEP SEARCHING. KEEP ASKING. KEEP UNLOCKING.</span></footer><script src='script.js'></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Unlocking the Scrolls — a place to search the Word.">
+<title>Unlocking the Scrolls</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+<canvas id="scene" aria-hidden="true"></canvas><div class="grain" aria-hidden="true"></div>
+<header class="site-nav"><a class="brand" href="#top">UTS</a><nav><a href="#method">The Method</a><a href="#scrolls">The Scrolls</a><a href="#questions">Questions</a></nav></header>
+<main id="top">
+<section class="hero">
+<div class="hero-copy">
+<div class="eyebrow">A PLACE TO SEARCH THE WORD</div>
+<h1>UNLOCKING<br><span>THE SCROLLS</span></h1>
+<p class="sub">There is more to the Word.</p>
+<button id="open" class="outline-btn">OPEN THE SCROLL <span>↗</span></button>
+<div class="hint">SCROLL TO UNFURL <span>↓</span></div>
+</div>
+</section>
+<section id="reveal" class="reveal-section">
+<div class="section-number">01</div>
+<div class="reveal-copy">
+<span class="kicker">THE SEARCH BEGINS</span>
+<h2>What is hidden<br><em>inside the Scroll?</em></h2>
+<p>The manuscript opens slowly. What first appears as ink and fragments becomes a path into Scripture — a place to read, ask, examine and discover.</p>
+<button id="enter" class="solid-btn">ENTER THE SCROLLS <span>↓</span></button>
+</div>
+<div class="ink-orbit" aria-hidden="true"><i>✦</i><b>SEARCH</b><i>✧</i><b>DISCOVER</b></div>
+</section>
+</main>
+
+<section id="method" class="method-section">
+<div class="section-top"><span class="kicker">THE METHOD</span><p>SCROLLS is not just a name. It is the way we approach the text.</p></div>
+<div class="acronym">
+<div class="method-card"><span>S</span><h3>Search</h3><p>Look closer. Ask better questions. Refuse the surface.</p></div>
+<div class="method-card"><span>C</span><h3>Context</h3><p>Place every passage within its story, audience and setting.</p></div>
+<div class="method-card"><span>R</span><h3>Revelation</h3><p>Notice what becomes clear as the pieces come together.</p></div>
+<div class="method-card"><span>O</span><h3>Observation</h3><p>Start with what the text actually says before deciding what it means.</p></div>
+<div class="method-card"><span>L</span><h3>Language</h3><p>Look at words, translations and the language beneath the page.</p></div>
+<div class="method-card"><span>L</span><h3>Links</h3><p>Trace connections across passages, themes, people and promises.</p></div>
+<div class="method-card"><span>S</span><h3>Scripture</h3><p>Return to the Word. Let Scripture remain at the centre of the search.</p></div>
+</div>
+</section>
+
+<section id="scrolls" class="scrolls-section">
+<div class="scrolls-intro"><span class="kicker">THE SCROLLS</span><h2>Go beyond the surface.</h2><p>Deep dives, studies and discoveries designed to make you slow down and look again.</p></div>
+<div class="feature-grid">
+<article><div class="feature-icon">✧</div><span>01 · STUDY</span><h3>Search the Word</h3><p>Follow a passage carefully — its language, context, connections and questions.</p><a href="#questions">Explore →</a></article>
+<article><div class="feature-icon">◈</div><span>02 · QUESTION</span><h3>Bring the Difficult Things</h3><p>Ask the questions that don't fit neatly into a Sunday-school answer.</p><a href="#questions">Submit a question →</a></article>
+<article><div class="feature-icon">⌁</div><span>03 · DISCOVER</span><h3>Find the Connections</h3><p>See how themes, stories, words and promises meet across Scripture.</p><a href="#method">See the method →</a></article>
+</div>
+</section>
+
+<section id="questions" class="questions-section">
+<div class="question-mark">?</div><span class="kicker">THE QUESTION DESK</span><h2>What have you<br><em>always wondered?</em></h2><p>Unlocking the Scrolls is a place for honest questions. The questions that make you search are welcome here.</p>
+<button class="outline-btn" onclick="document.getElementById('questionForm').classList.toggle('open')">SUBMIT A QUESTION <span>↗</span></button>
+<form id="questionForm" class="question-form" onsubmit="event.preventDefault(); document.getElementById('thanks').textContent='Your question is ready to be added to the Scrolls.'; this.reset();">
+<input aria-label="Your name" placeholder="Your name (optional)"><textarea required aria-label="Your question" placeholder="Write your question..."></textarea><button class="solid-btn" type="submit">SEND QUESTION</button><p id="thanks"></p>
+</form>
+</section>
+<footer><div>UNLOCKING THE SCROLLS</div><small>SEARCH · CONTEXT · REVELATION · OBSERVATION · LANGUAGE · LINKS · SCRIPTURE</small></footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script><script src="script.js"></script>
+</body></html>
