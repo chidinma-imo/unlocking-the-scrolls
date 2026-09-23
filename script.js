@@ -1,5 +1,5 @@
-document.getElementById("openScroll").onclick = function() {
+document.getElementById("openScroll").addEventListener("click", () => {
     document.getElementById("archive").scrollIntoView({
         behavior: "smooth"
     });
-};
+});
