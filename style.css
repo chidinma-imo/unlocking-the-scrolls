@@ -1,10 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Mono:wght@300;400&display=swap');
-
-
-/* ------------------------------
-   RESET
------------------------------- */
-
 * {
     margin: 0;
     padding: 0;
@@ -18,79 +11,67 @@ html {
 body {
     background: #090807;
     color: #e8dfd0;
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: Georgia, serif;
     overflow-x: hidden;
 }
 
 
-/* ------------------------------
-   INTRO
------------------------------- */
+/* =========================
+   OPENING SCREEN
+========================= */
 
 .intro-screen {
     min-height: 100vh;
     position: relative;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     overflow: hidden;
 
     background:
         radial-gradient(
             circle at 50% 45%,
-            #2b2117 0%,
-            #15100c 38%,
-            #090807 75%
+            #302316 0%,
+            #17110c 38%,
+            #090807 78%
         );
 }
 
 
-/* subtle atmospheric glow */
+/* soft light behind the scroll */
 
 .ambient-light {
     position: absolute;
-
     width: 650px;
     height: 650px;
-
     border-radius: 50%;
 
-    background: rgba(187, 139, 73, 0.08);
+    background: rgba(190, 145, 75, 0.08);
 
     filter: blur(100px);
-
     pointer-events: none;
 }
 
 
-/* ------------------------------
-   INTRO TEXT
------------------------------- */
+/* =========================
+   INTRO TITLE
+========================= */
 
 .intro-content {
     position: absolute;
-
-    top: 11vh;
+    top: 10vh;
+    z-index: 5;
 
     text-align: center;
-
-    z-index: 5;
 
     transition:
         opacity 1s ease,
         transform 1s ease;
 }
 
-.small-title,
-.section-label {
-    font-family: "DM Mono", monospace;
-
+.small-title {
     font-size: 10px;
-
     letter-spacing: 5px;
-
     opacity: 0.6;
 }
 
@@ -100,47 +81,38 @@ body {
     font-size: clamp(55px, 9vw, 115px);
 
     font-weight: 400;
-
-    line-height: 0.78;
-
+    line-height: 0.8;
     letter-spacing: -4px;
 }
 
 .intro-content h1 span {
     display: block;
-
+    margin-left: 65px;
     font-style: italic;
-
-    margin-left: 70px;
 }
 
 .tagline {
     margin-top: 25px;
 
-    font-family: "DM Mono", monospace;
-
     font-size: 11px;
+    letter-spacing: 4px;
 
-    letter-spacing: 3px;
-
-    opacity: 0.55;
+    opacity: 0.5;
 }
 
 
-/* ------------------------------
-   BUTTON
------------------------------- */
+/* =========================
+   OPEN BUTTON
+========================= */
 
 .open-button {
     margin-top: 35px;
 
-    padding: 13px 20px;
-
     display: inline-flex;
-
+    align-items: center;
     gap: 20px;
 
-    align-items: center;
+    padding: 14px 22px;
 
     border: 1px solid rgba(232, 223, 208, 0.35);
 
@@ -148,84 +120,82 @@ body {
 
     color: #e8dfd0;
 
-    font-family: "DM Mono", monospace;
-
-    font-size: 10px;
-
+    font-family: Georgia, serif;
+    font-size: 12px;
     letter-spacing: 2px;
 
     cursor: pointer;
 
-    transition: 0.4s ease;
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        transform 0.4s ease;
 }
 
 .open-button:hover {
     background: #e8dfd0;
-
     color: #120f0c;
-
     transform: translateY(-3px);
 }
 
 .arrow {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 
-/* ------------------------------
+/* =========================
    SCROLL
------------------------------- */
+========================= */
 
 .scroll-container {
     position: absolute;
 
-    width: min(1000px, 82vw);
+    top: 53%;
+    left: 50%;
 
+    width: min(1000px, 82vw);
     height: 360px;
 
+    transform: translate(-50%, -50%);
+
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
-    top: 52%;
-
-    transform: translateY(-50%);
+    filter:
+        drop-shadow(0 40px 45px rgba(0, 0, 0, 0.65));
 
     transition:
-        transform 2s cubic-bezier(.77,0,.18,1),
+        transform 2s ease,
         opacity 1.5s ease;
-
-    filter:
-        drop-shadow(0 40px 45px rgba(0,0,0,.65));
 }
 
 
-/* parchment */
+/* =========================
+   PARCHMENT
+========================= */
 
 .parchment {
-    width: 82%;
-
-    height: 250px;
-
     position: relative;
+
+    width: 82%;
+    height: 250px;
 
     background:
         radial-gradient(
             ellipse at center,
             #d8bf91 0%,
-            #b89b69 65%,
-            #876c43 100%
+            #b99c6a 60%,
+            #866b43 100%
         );
 
     box-shadow:
-        inset 0 0 40px rgba(71, 46, 22, .3),
-        inset 0 0 5px rgba(255,255,255,.2);
+        inset 0 0 45px rgba(65, 40, 18, 0.35),
+        inset 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 
-/* parchment edges */
+/* darker parchment edges */
 
 .parchment::before,
 .parchment::after {
@@ -236,17 +206,14 @@ body {
     top: 0;
 
     width: 35px;
-
     height: 100%;
 
     background:
         linear-gradient(
             to right,
-            rgba(48,29,13,.45),
+            rgba(48, 29, 13, 0.45),
             transparent
         );
-
-    opacity: .7;
 }
 
 .parchment::before {
@@ -255,12 +222,13 @@ body {
 
 .parchment::after {
     right: 0;
-
     transform: scaleX(-1);
 }
 
 
-/* scroll rods */
+/* =========================
+   SCROLL RODS
+========================= */
 
 .scroll-rod {
     position: absolute;
@@ -268,7 +236,6 @@ body {
     z-index: 4;
 
     width: 52px;
-
     height: 295px;
 
     border-radius: 30px;
@@ -276,15 +243,15 @@ body {
     background:
         linear-gradient(
             90deg,
-            #4b321c,
-            #a67d47,
-            #5b3d21,
-            #b08b55,
-            #4a301b
+            #49301a,
+            #a47b45,
+            #5a3b20,
+            #b18a54,
+            #49301a
         );
 
     box-shadow:
-        0 15px 30px rgba(0,0,0,.6);
+        0 15px 30px rgba(0, 0, 0, 0.6);
 }
 
 .left-rod {
@@ -296,17 +263,16 @@ body {
 }
 
 
-/* scroll content */
+/* =========================
+   PARCHMENT CONTENT
+========================= */
 
 .parchment-inner {
     height: 100%;
 
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
@@ -317,21 +283,18 @@ body {
 }
 
 .parchment-inner > p:first-child {
-    font-family: "DM Mono", monospace;
-
-    font-size: 8px;
-
-    letter-spacing: 4px;
-
     margin-bottom: 12px;
 
-    opacity: .65;
+    font-size: 8px;
+    letter-spacing: 4px;
+
+    opacity: 0.65;
 }
 
 .parchment-inner h2 {
     font-size: clamp(42px, 6vw, 70px);
 
-    line-height: .75;
+    line-height: 0.75;
 
     font-weight: 500;
 }
@@ -346,53 +309,45 @@ body {
     max-width: 430px;
 
     font-size: 15px;
-
     font-style: italic;
 
-    line-height: 1.2;
+    line-height: 1.3;
 
-    opacity: .8;
+    opacity: 0.8;
 }
 
 .reference {
     margin-top: 8px;
 
-    font-family: "DM Mono", monospace;
-
     font-size: 8px;
-
     letter-spacing: 2px;
 
-    opacity: .6;
+    opacity: 0.6;
 }
 
 
-/* ------------------------------
+/* =========================
    SCROLL HINT
------------------------------- */
+========================= */
 
 .scroll-hint {
     position: absolute;
 
     bottom: 25px;
-
     left: 50%;
 
     transform: translateX(-50%);
 
-    font-family: "DM Mono", monospace;
-
     font-size: 8px;
-
     letter-spacing: 4px;
 
-    opacity: .3;
+    opacity: 0.3;
 }
 
 
-/* ------------------------------
+/* =========================
    ARCHIVE
------------------------------- */
+========================= */
 
 .archive {
     min-height: 100vh;
@@ -405,7 +360,7 @@ body {
     background:
         radial-gradient(
             circle at 50% 20%,
-            #251b12,
+            #281d13,
             #0b0907 65%
         );
 }
@@ -418,14 +373,20 @@ body {
     text-align: center;
 }
 
+.section-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    opacity: 0.6;
+}
+
 .archive-header h2 {
+    margin-top: 25px;
+
     font-size: clamp(55px, 8vw, 100px);
 
     font-weight: 400;
 
-    line-height: .82;
-
-    margin-top: 25px;
+    line-height: 0.82;
 }
 
 .archive-header h2 em {
@@ -441,13 +402,13 @@ body {
 
     line-height: 1.6;
 
-    opacity: .6;
+    opacity: 0.6;
 }
 
 
-/* ------------------------------
+/* =========================
    ARCHIVE CARDS
------------------------------- */
+========================= */
 
 .archive-grid {
     max-width: 1100px;
@@ -474,71 +435,65 @@ body {
 
     justify-content: flex-end;
 
-    border: 1px solid rgba(216,191,145,.18);
+    border: 1px solid rgba(216, 191, 145, 0.18);
 
     background:
         linear-gradient(
             135deg,
-            rgba(190,150,91,.08),
-            rgba(0,0,0,.12)
+            rgba(190, 150, 91, 0.08),
+            rgba(0, 0, 0, 0.15)
         );
 
     overflow: hidden;
 
     transition:
-        transform .5s ease,
-        border-color .5s ease;
+        transform 0.5s ease,
+        border-color 0.5s ease;
 }
 
 .archive-card:hover {
     transform: translateY(-8px);
 
-    border-color: rgba(216,191,145,.5);
+    border-color: rgba(216, 191, 145, 0.5);
 }
 
 
-/* number */
+/* card numbers */
 
 .card-number {
     position: absolute;
 
     top: 25px;
-
     right: 30px;
-
-    font-family: "DM Mono", monospace;
 
     font-size: 9px;
 
-    opacity: .4;
+    opacity: 0.4;
 }
 
 
-/* symbol */
+/* card symbols */
 
 .card-symbol {
     position: absolute;
 
     top: 35px;
-
     left: 40px;
 
     font-size: 55px;
 
-    font-weight: 300;
-
-    opacity: .35;
+    opacity: 0.35;
 }
 
 
-/* card typography */
+/* card text */
 
 .archive-card h3 {
+    margin-bottom: 10px;
+
     font-size: 48px;
 
     font-weight: 400;
-
-    margin-bottom: 10px;
 }
 
 .archive-card p {
@@ -548,25 +503,23 @@ body {
 
     line-height: 1.6;
 
-    opacity: .6;
+    opacity: 0.6;
 }
 
 .card-link {
     margin-top: 25px;
 
-    font-family: "DM Mono", monospace;
-
     font-size: 9px;
 
     letter-spacing: 2px;
 
-    opacity: .7;
+    opacity: 0.7;
 }
 
 
-/* ------------------------------
+/* =========================
    FOOTER
------------------------------- */
+========================= */
 
 footer {
     max-width: 1100px;
@@ -575,33 +528,29 @@ footer {
 
     padding-top: 30px;
 
-    border-top: 1px solid rgba(255,255,255,.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
-
-    font-family: "DM Mono", monospace;
+    justify-content: space-between;
 
     font-size: 8px;
 
     letter-spacing: 1px;
 
-    opacity: .45;
+    opacity: 0.45;
 }
 
 .footer-mark {
     font-size: 18px;
-
     letter-spacing: 0;
 }
 
 
-/* ------------------------------
+/* =========================
    MOBILE
------------------------------- */
+========================= */
 
 @media (max-width: 700px) {
 
@@ -619,7 +568,6 @@ footer {
 
     .scroll-container {
         width: 110vw;
-
         height: 300px;
     }
 
@@ -628,9 +576,8 @@ footer {
     }
 
     .scroll-rod {
-        height: 245px;
-
         width: 38px;
+        height: 245px;
     }
 
     .parchment-inner h2 {
@@ -643,7 +590,6 @@ footer {
 
     .archive-grid {
         grid-template-columns: 1fr;
-
         margin-top: 70px;
     }
 
@@ -653,9 +599,7 @@ footer {
 
     footer {
         flex-direction: column;
-
         gap: 15px;
-
         text-align: center;
     }
 }
