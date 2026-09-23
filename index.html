@@ -12,96 +12,170 @@
 
 <body>
 
-    <section class="intro-screen" id="introScreen">
+    <!-- =========================
+         LANDING PAGE
+    ========================== -->
 
-        <div class="ambient-light"></div>
+    <main class="landing" id="landing">
 
-        <div class="intro-content">
+        <!-- Atmospheric elements -->
 
-            <p class="small-title">
+        <div class="light-glow"></div>
+
+        <div class="dust dust-one"></div>
+        <div class="dust dust-two"></div>
+        <div class="dust dust-three"></div>
+        <div class="dust dust-four"></div>
+
+
+        <!-- Top identity -->
+
+        <header class="top-bar">
+
+            <div class="brand-mark">
+                UTS
+            </div>
+
+            <div class="top-label">
                 A SCRIPTURE ARCHIVE
-            </p>
+            </div>
 
-            <h1>
-                Unlocking
-                <span>the Scrolls</span>
-            </h1>
+            <div class="top-number">
+                01 / 01
+            </div>
 
-            <p class="tagline">
-                Search. Context. Revelation.
-            </p>
-
-            <button class="open-button" id="openScroll">
-                <span>Open the Scroll</span>
-                <span class="arrow">↗</span>
-            </button>
-
-        </div>
+        </header>
 
 
-        <div class="scroll-container" id="scroll">
+        <!-- Main introduction -->
 
-            <div class="scroll-rod left-rod"></div>
+        <section class="hero">
 
-            <div class="parchment">
+            <div class="hero-copy">
 
-                <div class="parchment-inner">
+                <p class="eyebrow">
+                    SEARCH · CONTEXT · REVELATION
+                </p>
 
-                    <p>
-                        SEARCH · CONTEXT · REVELATION
-                    </p>
+                <h1>
+                    Unlocking
+                    <span>the Scrolls</span>
+                </h1>
 
-                    <h2>
-                        Unlocking<br>
-                        the Scrolls
-                    </h2>
+                <p class="hero-description">
+                    A place to search the Scriptures,
+                    ask questions, uncover context,
+                    and follow the Word deeper.
+                </p>
 
-                    <div class="ornament">
-                        ✦
+            </div>
+
+
+            <!-- Physical scroll -->
+
+            <div class="scroll-stage" id="scrollStage">
+
+                <div class="scroll-shadow"></div>
+
+                <div class="scroll left-scroll">
+
+                    <div class="scroll-handle"></div>
+
+                </div>
+
+                <div class="scroll-paper">
+
+                    <div class="paper-texture"></div>
+
+                    <div class="paper-content">
+
+                        <p class="paper-label">
+                            UNLOCKING THE SCROLLS
+                        </p>
+
+                        <div class="paper-symbol">
+                            ✦
+                        </div>
+
+                        <p class="scripture">
+                            “Open thou mine eyes,
+                            that I may behold wondrous things
+                            out of thy law.”
+                        </p>
+
+                        <span class="scripture-reference">
+                            PSALM 119:18
+                        </span>
+
                     </div>
 
-                    <p class="scripture-line">
-                        “Open thou mine eyes,
-                        that I may behold wondrous things
-                        out of thy law.”
-                    </p>
+                </div>
 
-                    <span class="reference">
-                        Psalm 119:18
-                    </span>
+                <div class="scroll right-scroll">
+
+                    <div class="scroll-handle"></div>
 
                 </div>
 
             </div>
 
-            <div class="scroll-rod right-rod"></div>
 
-        </div>
+            <!-- CTA -->
+
+            <button
+                class="open-scroll"
+                id="openScroll"
+                type="button"
+            >
+
+                <span>
+                    OPEN THE SCROLL
+                </span>
+
+                <span class="button-arrow">
+                    ↗
+                </span>
+
+            </button>
 
 
-        <div class="scroll-hint">
-            SCROLL TO EXPLORE
-        </div>
+            <div class="scroll-indicator">
 
-    </section>
+                <span class="line"></span>
 
+                <span>
+                    SCROLL TO EXPLORE
+                </span>
+
+                <span class="line"></span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         ARCHIVE
+    ========================== -->
 
     <section class="archive" id="archive">
 
-        <div class="archive-header">
+        <div class="archive-intro">
 
-            <p class="section-label">
+            <p class="archive-label">
                 THE ARCHIVE
             </p>
 
             <h2>
-                What will you<br>
+                What will you
                 <em>uncover?</em>
             </h2>
 
-            <p>
-                A growing collection of Scripture studies,
-                questions, discoveries and writings.
+            <p class="archive-description">
+                Scripture, studies, questions, apologetics
+                and writings gathered in one place.
             </p>
 
         </div>
@@ -109,102 +183,165 @@
 
         <div class="archive-grid">
 
+
             <article class="archive-card">
 
-                <div class="card-number">01</div>
-
-                <div class="card-symbol">✦</div>
-
-                <h3>Scripture</h3>
-
-                <p>
-                    Search the Word.
-                    Follow the text.
-                    See what Scripture actually says.
-                </p>
-
-                <span class="card-link">
-                    Explore →
+                <span class="card-number">
+                    01
                 </span>
+
+                <span class="card-icon">
+                    ✦
+                </span>
+
+                <div class="card-content">
+
+                    <p class="card-type">
+                        THE WORD
+                    </p>
+
+                    <h3>
+                        Scripture
+                    </h3>
+
+                    <p>
+                        Search the Word.
+                        Follow the text.
+                        See what Scripture actually says.
+                    </p>
+
+                    <span class="card-action">
+                        EXPLORE →
+                    </span>
+
+                </div>
 
             </article>
 
 
             <article class="archive-card">
 
-                <div class="card-number">02</div>
-
-                <div class="card-symbol">◈</div>
-
-                <h3>Bible Studies</h3>
-
-                <p>
-                    Slow down, ask questions,
-                    examine context and uncover meaning.
-                </p>
-
-                <span class="card-link">
-                    Enter →
+                <span class="card-number">
+                    02
                 </span>
+
+                <span class="card-icon">
+                    ◈
+                </span>
+
+                <div class="card-content">
+
+                    <p class="card-type">
+                        DISCOVERY
+                    </p>
+
+                    <h3>
+                        Bible Studies
+                    </h3>
+
+                    <p>
+                        Slow down.
+                        Ask questions.
+                        Examine context.
+                        Uncover meaning.
+                    </p>
+
+                    <span class="card-action">
+                        ENTER →
+                    </span>
+
+                </div>
 
             </article>
 
 
             <article class="archive-card">
 
-                <div class="card-number">03</div>
-
-                <div class="card-symbol">◇</div>
-
-                <h3>Apologetics</h3>
-
-                <p>
-                    Questions about faith,
-                    Christianity and the truth claims of Scripture.
-                </p>
-
-                <span class="card-link">
-                    Investigate →
+                <span class="card-number">
+                    03
                 </span>
+
+                <span class="card-icon">
+                    ◇
+                </span>
+
+                <div class="card-content">
+
+                    <p class="card-type">
+                        QUESTIONS OF FAITH
+                    </p>
+
+                    <h3>
+                        Apologetics
+                    </h3>
+
+                    <p>
+                        Explore questions about Christianity,
+                        Scripture and the truth claims of faith.
+                    </p>
+
+                    <span class="card-action">
+                        INVESTIGATE →
+                    </span>
+
+                </div>
 
             </article>
 
 
             <article class="archive-card">
 
-                <div class="card-number">04</div>
-
-                <div class="card-symbol">✎</div>
-
-                <h3>Writings</h3>
-
-                <p>
-                    Thoughts, discoveries and lessons
-                    written along the journey.
-                </p>
-
-                <span class="card-link">
-                    Read →
+                <span class="card-number">
+                    04
                 </span>
 
+                <span class="card-icon">
+                    ✎
+                </span>
+
+                <div class="card-content">
+
+                    <p class="card-type">
+                        FROM THE JOURNEY
+                    </p>
+
+                    <h3>
+                        Writings
+                    </h3>
+
+                    <p>
+                        Thoughts, discoveries and lessons
+                        written along the journey.
+                    </p>
+
+                    <span class="card-action">
+                        READ →
+                    </span>
+
+                </div>
+
             </article>
+
 
         </div>
 
 
-        <footer>
+        <!-- Archive footer -->
 
-            <div class="footer-mark">
-                UTS
+        <footer class="site-footer">
+
+            <div class="footer-left">
+                UNLOCKING THE SCROLLS
             </div>
 
-            <p>
-                Unlocking the Scrolls
-            </p>
+            <div class="footer-center">
+                SEARCH · CONTEXT · REVELATION ·
+                OBSERVATION · LANGUAGE · LINKS · SCRIPTURE
+            </div>
 
-            <p>
-                Search · Context · Revelation · Observation · Language · Links · Scripture
-            </p>
+            <div class="footer-right">
+                UTS ©
+            </div>
 
         </footer>
 
