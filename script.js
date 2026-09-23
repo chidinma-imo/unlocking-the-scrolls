@@ -1,10 +1,20 @@
-const enterButton = document.getElementById("enterButton");
-const archive = document.getElementById("archive");
+const openButton = document.getElementById("openScroll");
+const introScreen = document.getElementById("introScreen");
+const scroll = document.getElementById("scroll");
+const introContent = document.querySelector(".intro-content");
 
-enterButton.addEventListener("click", () => {
+openButton.addEventListener("click", () => {
 
-    archive.scrollIntoView({
-        behavior: "smooth"
-    });
+    scroll.classList.add("opening");
+
+    introContent.classList.add("fade-away");
+
+    setTimeout(() => {
+
+        document.getElementById("archive").scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }, 1800);
 
 });
