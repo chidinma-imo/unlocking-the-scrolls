@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b0907;
+    color: #e8dcc8;
+    font-family: Georgia, serif;
+    overflow-x: hidden;
+}
+
+#opening {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.scroll {
+    position: relative;
+    width: min(900px, 90vw);
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-paper {
+    position: relative;
+    width: 82%;
+    min-height: 480px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #c9ae7d 0%,
+            #a98b5c 55%,
+            #80633e 100%
+        );
+
+    color: #20170e;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.7);
+}
+
+.scroll-roller {
+    position: absolute;
+    z-index: 2;
+
+    width: 55px;
+    height: 500px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            to right,
+            #5a4024,
+            #b18b58,
+            #624725
+        );
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.scroll-roller.left {
+    left: 5%;
+}
+
+.scroll-roller.right {
+    right: 5%;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: 0.9;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.intro {
+    max-width: 500px;
+    line-height: 1.7;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+button {
+    border: 1px solid #20170e;
+    background: transparent;
+    padding: 15px 30px;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #20170e;
+    color: #e8dcc8;
+}
+
+#archive {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 30px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #241b13,
+            #0b0907 70%
+        );
+}
+
+.archive-content {
+    max-width: 700px;
+    text-align: center;
+}
+
+.archive-content h2 {
+    font-size: clamp(40px, 6vw, 75px);
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.archive-content p {
+    line-height: 1.8;
+}
